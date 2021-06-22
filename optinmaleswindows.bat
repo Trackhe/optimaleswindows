@@ -13,16 +13,16 @@ if %errorLevel% == 0 (
 curl --insecure "https://www.deskmodder.de/.moinmoin/Blank.ico.zip" --output "C:\Users\%username%\Desktop\blank.ico.zip"
 cls
 :anfang0
-if exist C:\Users\%username%\Desktop\Blank.ico.zip (
-	Call :UnZipFile "C:\Users\%username%\Desktop\" "C:\Users\%username%\Desktop\Blank.ico.zip"
+if exist C:\Users\%username%\Desktop\blank.ico.zip (
+	Call :UnZipFile "C:\Users\%username%\Desktop\" "C:\Users\%username%\Desktop\blank.ico.zip"
 	if exist C:\Users\%username%\Desktop\blank.ico (
-		if exist C:\Users\%username%\Desktop\Blank.ico (
+		if exist C:\Users\%username%\Desktop\blank.ico (
 			copy /Y C:\Users\%username%\Desktop\blank.ico %windir%
 			del /Q C:\Users\%username%\Desktop\blank.ico
 			cls
 			rd C:\Users\%username%\Desktop\blank.ico
-			if exist C:\Users\%username%\Desktop\Blank.ico.zip (
-				del /Q C:\Users\%username%\Desktop\Blank.ico.zip
+			if exist C:\Users\%username%\Desktop\blank.ico.zip (
+				del /Q C:\Users\%username%\Desktop\blank.ico.zip
 				del /Q C:\Users\%username%\Desktop\readme.txt
 				cls
 				GOTO next0
@@ -38,7 +38,7 @@ if exist C:\Users\%username%\Desktop\Blank.ico.zip (
 		GOTO anfang0
 	)
 ) else (
-	echo Warum löschst du die Zip, du Vogel.
+	echo Warum lÃ¶schst du die Zip, du Vogel.
 	pause
 	GOTO anfang
 )
